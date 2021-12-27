@@ -1,0 +1,14 @@
+package com.SpringEmployee.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class SpringEmployeeController {
+	
+	
+	public String showemployee() {
+		
+		return "HI EMPLOYEE";
+	}
+
+}

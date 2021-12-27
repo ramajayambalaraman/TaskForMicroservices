@@ -1,0 +1,14 @@
+package com.SalaryEmpl;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class SalaryController {
+
+	
+	public int salaryshow() {
+		
+		
+		return 567948;
+	}
+}

@@ -1,0 +1,27 @@
+package com.SpringEmployee.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class SpringEmployeeService {
+	
+	@Autowired
+	private RestTemplate resttemplate;
+	
+	
+	public String getname() {
+		
+	String name=resttemplate.getForObject("http://localhost:8082/api/name", String.class);
+	return name;
+		
+	}
+
+	@Bean
+	public RestTemplate resttemplate() {
+		return resttemplate;
+		
+	}
+}
